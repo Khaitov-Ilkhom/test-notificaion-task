@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.ant-table-wrapper .ant-table-tbody>tr>td {
+  padding: 8px !important;
+}
