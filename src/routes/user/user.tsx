@@ -82,7 +82,9 @@ const User = () => {
 
         {notifications.flat(1).length ? (
             <>
-              <div className="max-w-4xl mx-auto mb-4 text-sm text-gray-600">Jami {notifications.flat(1).length} ta bildirishnoma</div>
+              <div className="max-w-4xl mx-auto mb-4 text-sm text-gray-600">Jami {notifications.flat(1).length} ta
+                bildirishnoma
+              </div>
               <div className="max-w-4xl mx-auto space-y-3 mb-2">
                 {notifications.flat(1).map((n) => (
                     <div key={n.id}
@@ -91,9 +93,7 @@ const User = () => {
                         <div className="flex-1">
                           <div className="flex items-center space-x-2 mb-2">
                             <h3 className="font-semibold text-gray-900">{n.title}</h3>
-                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">
-                        {n.type === "fcm" ? "Push" : "WebSocket"}
-                      </span>
+                            <span className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">WebSocket</span>
                           </div>
                           <p className="text-gray-600 text-sm mb-2">{n.body}</p>
                           <p className="text-gray-400 text-xs flex items-center">🕒 {formatTime(n.createdAt)}</p>
